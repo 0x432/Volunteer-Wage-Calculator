@@ -3,7 +3,6 @@ package com.company;
 // Importing java utilities.
 import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Team // Class to represent the team.
@@ -22,15 +21,16 @@ public class Team // Class to represent the team.
         System.out.print(table(Team));
 
         System.out.println("\n-----------------------------\nSorted by amount of boxes");
-        Collections.sort(Team, (o1, o2) -> o2.getBoxes().compareTo(o1.getBoxes())); // Sorts boxes in descending order.
+        Team.sort((o1, o2) -> o2.getBoxes().compareTo(o1.getBoxes())); // Sorts boxes in descending order.
         System.out.print(table(Team));
 
         System.out.println("\n-----------------------------\nSorted by highest wage");
-        Collections.sort(Team, (o1, o2) -> o2.getWage().compareTo(o1.getWage())); // Sorts wage in descending order.
+        Team.sort((o1, o2) -> o2.getWage().compareTo(o1.getWage())); // Sorts wage in descending order.
         System.out.print(table(Team));
 
         System.out.println("\n-----------------------------\nSorted alphabetically"); // Sort name in alphabetical order.
-        Collections.sort(Team, new Comparator<Volunteer>() {
+        Team.sort(new Comparator<Volunteer>()
+        {
             @Override
             public int compare(Volunteer o1, Volunteer o2) {
                 return o1.getName().compareTo(o2.getName());
@@ -45,16 +45,16 @@ public class Team // Class to represent the team.
 
         int totalBoxes = 0; // Stores the total amount of volunteers in the team.
         double totalWage = 0; // Stores the total wage of the hole team.
-        String row = ""; // Store rows from the arraylist.
+        StringBuilder row = new StringBuilder(); // Store rows from the arraylist.
 
         String tableHeader = String.format("%-6s%-10s%-6s%-7s\n", "ID", "Name", "Boxes", "Wage"); // Creates a table header witch is neatly aligned.
         for (Volunteer volunteer : Team) // Loops through volunteers in the team.
         {
             totalBoxes = totalBoxes + volunteer.getBoxes(); // Adds previous stored boxes to the current volunteers boxes to get the total amount of boxes.
             totalWage = totalWage + volunteer.getWage(); // Adds previous stored wages to the current volunteers wage to get the total wage for the team.
-            row = row + String.format("%-6d%-10s%-6d%-7s\n", volunteer.getID(), volunteer.getName(), volunteer.getBoxes(), currencyFormat.format(volunteer.getWage())); // Formats volunteer in the list to make a neat row then adds the string with the previous string.
+            row.append(String.format("%-6d%-10s%-6d%-7s\n", volunteer.getID(), volunteer.getName(), volunteer.getBoxes(), currencyFormat.format(volunteer.getWage()))); // Formats volunteer in the list to make a neat row then adds the string with the previous string.
         }
-        row = row + String.format("\nTotal Volunteers = %d\nTotal Boxes = %d\nTotal Wage = %s",Team.size(), totalBoxes,currencyFormat.format(totalWage)); // Creates String to show statistics of team and adds it to the rows.
+        row.append(String.format("\nTotal Volunteers = %d\nTotal Boxes = %d\nTotal Wage = %s", Team.size(), totalBoxes, currencyFormat.format(totalWage))); // Creates String to show statistics of team and adds it to the rows.
         return tableHeader + row; // returns the table header and all the rows to make a table.
     }
 }

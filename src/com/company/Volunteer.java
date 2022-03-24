@@ -2,8 +2,8 @@ package com.company;
 
 public class Volunteer // Class to represent the volunteers.
 {
-    private int id; // Stores the volunteer's id.
-    private String name; // Stores the volunteer's name.
+    private final int id; // Stores the volunteer's id.
+    private final String name; // Stores the volunteer's name.
     private int boxes; // Stores the volunteer's boxes.
 
     public Volunteer(int id, String name, int boxes, int addBoxes) // Volunteer constructor.
@@ -51,8 +51,8 @@ public class Volunteer // Class to represent the volunteers.
         return wage; // Returns the calculated wage
     }
 
-    public Integer updateBoxes(int newBoxes){
+    public void updateBoxes(int newBoxes){
         checkNumeric(newBoxes);
-        return this.boxes = newBoxes + boxes; // Returns the volunteers value plus the new boxes.
+        this.boxes = newBoxes + boxes;
     } // Calculates the new box total.
 }
