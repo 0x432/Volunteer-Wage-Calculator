@@ -13,7 +13,6 @@ public class Volunteer extends table {
         this.boxes = boxes;
         updateBoxes(addBoxes);
         super.addVolunteers(this);
-        System.out.println(getTable());
     }
 
     public int getID(){
@@ -28,8 +27,18 @@ public class Volunteer extends table {
         return boxes;
     }
 
-    public int updateBoxes(int newBoxes){
-        return this.boxes = newBoxes + boxes;
+    public int updateBoxes(int newBoxes) {
+        int BoxesUpdated = 0;
+        if (newBoxes <= 0)
+        {
+            System.out.println("Error, you cannot enter new boxes below or equal to 0");
+            System.exit(1);
+        }
+        else
+        {
+            BoxesUpdated = this.boxes = newBoxes + boxes;
+        }
+        return this.boxes = BoxesUpdated;
     }
 
     public double getWage(){
