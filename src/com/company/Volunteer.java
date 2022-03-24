@@ -1,34 +1,31 @@
 package com.company;
 
-import java.util.Collections;
-
-public class Volunteer extends table
+public class Volunteer // Class to represent the volunteers.
 {
-    private int id;
-    private String name;
-    private int boxes;
+    private int id; // Stores the volunteer's id.
+    private String name; // Stores the volunteer's name.
+    private int boxes; // Stores the volunteer's boxes.
 
-    public Volunteer(int id, String name, int boxes, int addBoxes) {
-        super(id,name,boxes);
-        this.id = id;
+    public Volunteer(int id, String name, int boxes, int addBoxes) // Volunteer constructor.
+    {
+        this.id = id; // gets the volunteers stored id and makes in the id that has been passed to this constructor.
         this.name = name;
         this.boxes = boxes;
-        checkNumeric(id);
+        checkNumeric(id); // Passes value to check the numerical value.
         checkNumeric(boxes);
         updateBoxes(addBoxes);
-        super.addVolunteers(this);
-        getTable();
-    } // Volunteer constructor.
+    }
 
-    public void checkNumeric(int value){
+    public void checkNumeric(int value) // Checks of the value is less than or equal to 0.
+    {
         if (value <= 0)
         {
-            System.out.println("Error, you cannot enter a value less than or equal to 0");
-            System.exit(1);
+            System.out.println("Error, you cannot enter a value less than or equal to 0"); // Through error message.
+            System.exit(1); // Ends the program.
         }
-    } // Checks of the value is less than or equal to 0.
+    }
 
-    public int getID(){
+    public Integer getID(){
         return id;
     } // Returns the id of volunteer.
 
@@ -40,23 +37,22 @@ public class Volunteer extends table
         return boxes;
     } // Returns the boxes of volunteer.
 
-    public double getWage(){
-        double wage;
-        if (getBoxes() <= 50)
+    public Double getWage() // Calculates and then returns the wage of volunteer.
+    {
+        double wage; // Stores wage.
+        if (getBoxes() <= 50) // If volunteer has less or equal to 50 boxes.
         {
-            wage = 0.15 * getBoxes();
+            wage = 0.15 * getBoxes(); // Do this calculation.
         }
-        else
+        else // Else if the volunteer has more than 50 boxes.
         {
-            wage = ((getBoxes() - 50) * 0.20) + (0.15 * 50);
+            wage = ((getBoxes() - 50) * 0.20) + (0.15 * 50); // Do this calculation.
         }
-        return wage;
-    } // Calculates and then returns the wage of volunteer.
+        return wage; // Returns the calculated wage
+    }
 
-    public Integer  updateBoxes(int newBoxes) {
+    public Integer updateBoxes(int newBoxes){
         checkNumeric(newBoxes);
-        return this.boxes = newBoxes + boxes;
+        return this.boxes = newBoxes + boxes; // Returns the volunteers value plus the new boxes.
     } // Calculates the new box total.
-
-
 }
