@@ -1,6 +1,5 @@
 package com.company;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class Team
@@ -18,6 +17,4 @@ public class Team
     public void addVolunteers(Volunteer V){
         Team.add(V);
     }
-
-
 }

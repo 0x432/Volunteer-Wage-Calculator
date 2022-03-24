@@ -13,7 +13,6 @@ public class table extends Team{
     }
 
     public void getTable() {
-
         String row = null;
         for (int cnt = 0; cnt < Team.size(); cnt++) {
             row = String.format("%-6d%-10s%-6d%-7s",

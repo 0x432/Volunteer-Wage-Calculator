@@ -27,18 +27,17 @@ public class Volunteer extends table {
         return boxes;
     }
 
-    public int updateBoxes(int newBoxes) {
-        int BoxesUpdated = 0;
-        if (newBoxes <= 0)
+    public void checkNumeric(int value){
+        if (value <= 0)
         {
-            System.out.println("Error, you cannot enter new boxes below or equal to 0");
+            System.out.println("Error, you cannot enter a value less than or equal to 0");
             System.exit(1);
         }
-        else
-        {
-            BoxesUpdated = this.boxes = newBoxes + boxes;
-        }
-        return this.boxes = BoxesUpdated;
+    }
+
+    public int updateBoxes(int newBoxes) {
+        checkNumeric(newBoxes);
+        return this.boxes = newBoxes + boxes;
     }
 
     public double getWage(){
