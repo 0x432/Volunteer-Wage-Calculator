@@ -5,33 +5,57 @@ import java.util.Comparator;
 
 public class Team
 {
-    ArrayList<Volunteer> Team ; // Stores volunteers in team.
+    ArrayList<Volunteer> Team;
     NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 
-    public Team(int id, String name, int boxes) {
-        this.Team = new ArrayList<Volunteer>();
+    public Team()
+    {
+        this.Team = new ArrayList<>();
     } // Team constructor.
 
-
-    public ArrayList getTeam(){
-        return Team;
-    } // Returns the team arraylist.
-
-    public void addVolunteers(Volunteer V){
+    public void addVolunteers(Volunteer V) // Adds volunteer to team.
+    {
         Team.add(V);
-    } // Adds volunteer to team.
+    }
 
-    public void teamToTable() {
-        StringBuilder row = new StringBuilder();
+    public StringBuilder getTable() // Returns a table of volunteers in the team.
+    {
+        StringBuilder Table = new StringBuilder();
+        Table.append(String.format("%-6s%-10s%-6s%-7s\n", "ID", "Name", "Boxes", "Wage"));
+        for (Volunteer volunteer : Team)
+        {
+            Table.append(String.format("%-6d%-10s%-6d%-7s\n", volunteer.getID(), volunteer.getName(), volunteer.getBoxes(), currencyFormat.format(volunteer.getWage())));
+        }
+        return Table;
+    }
 
-        Team.sort((o1, o2) -> o2.getBoxes().compareTo(o1.getBoxes()));
-
-        for (Volunteer volunteer : Team) {
-            row.append( String.format("%-6d%-10s%-6d%-7s", volunteer.getID(), volunteer.getName(), volunteer.getBoxes(), currencyFormat.format(volunteer.getWage())));
-        };
-        System.out.println(row);
-
+    public StringBuilder getStats() // Gets the statistics of the team.
+    {
+        int totalBoxes = 0; // Stores the total amount of volunteers in the team.
+        double totalWage = 0; // Stores the total wage of the hole team.
+        StringBuilder Stats = new StringBuilder(); // Stores stats of the team.
+        for (Volunteer volunteer : Team)
+        {
+            totalBoxes = totalBoxes + volunteer.getBoxes(); // Adds previous stored boxes to the current volunteers boxes to get the total amount of boxes.
+            totalWage = totalWage + volunteer.getWage(); // Adds previous stored wages to the current volunteers wage to get the total wage for the team.
+        }
+        Stats.append(String.format("\nTotal Volunteers = %d\nTotal Boxes = %d\nTotal Wage = %s", Team.size(), totalBoxes, currencyFormat.format(totalWage))); // Creates String to show statistics of team and adds it to the rows.
+        return Stats;
 
     }
 
+    public void sortByBoxes() // Sorts boxes in descending order.
+    {
+        Team.sort((o1, o2) -> o2.getBoxes().compareTo(o1.getBoxes()));
+    }
+
+    public void sortByWage() // Sorts wage in descending order.
+    {
+        Team.sort((o1, o2) -> o2.getWage().compareTo(o1.getWage()));
+    }
+
+    public void sortAlphabetically() // Sort name in alphabetical order.
+    {
+        Team.sort(Comparator.comparing(Volunteer::getName));
+    }
 }
