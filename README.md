@@ -8,7 +8,7 @@ The main class performs as the backbone of the program, its purpose is to create
 
 
 
-#### Volunteer Class
+### Volunteer Class
 Volunteers are essiential to the program, this class is responsible for all the volunteer methods, this class is used to store volunteeres data, caluclate wages and to calculate boxes. There are also get methods which allow us to get data from that volunteer within another class at anytime.
 
 This is were volunteer data is stored and the data format it needs.
