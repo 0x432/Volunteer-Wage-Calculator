@@ -36,6 +36,7 @@ Volunteer getWage | Team leader getWage
 
 An important function of any class is to return values that have been stored within the class these methods can be used in other classes in the program to use. This makes it easier to get values that are needed. 
 
+![Capture](https://user-images.githubusercontent.com/100306913/160257283-02052c66-9e33-4b97-b225-9600cb6fcc9c.PNG)
 
 ### Teamleader Class
 
