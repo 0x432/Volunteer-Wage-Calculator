@@ -38,7 +38,8 @@ An important function of any class is to return values that have been stored wit
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160257283-02052c66-9e33-4b97-b225-9600cb6fcc9c.PNG)
 
-### Teamleader Class
+### Team Leader Class
+Because the Team leader classes is basically identical to the volunteer class we can inherit the volunteer class within the team leader class. This means that when a new team leader is created the construcutor will ask for the same values as the volunter contructor and use super() for encapsualation. The only difference between these 2 classes is the getTL method which reutirns * because they are a team leader and the getWage method which needs to add an extra 20% onto there wage because they are a team leader.
 
 
 
