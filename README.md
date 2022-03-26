@@ -18,6 +18,9 @@ A volunteer constructor is designed to get the data required check for errors an
 
 ![volunteerconstrutor](https://user-images.githubusercontent.com/100306913/160255773-978fdd1d-0716-4e12-afb7-31fc9746dc86.png)
 
+To make sure that only sesntible values are proesesed a check is performed to check if the value is equal to 0 or less than 0. If the value is the program will do a system exit and output and error.
+
+![volchecnum](https://user-images.githubusercontent.com/100306913/160256545-9cd58132-42fb-4922-ad1f-021ae8bb1001.png)
 
 
 #### Teamleader Class
