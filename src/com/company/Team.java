@@ -2,6 +2,7 @@ package com.company;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Team
 {
@@ -21,10 +22,10 @@ public class Team
     public StringBuilder getTable() // Returns a table of volunteers in the team.
     {
         StringBuilder Table = new StringBuilder();
-        Table.append(String.format("%-6s%-10s%-6s%-7s\n", "ID", "Name", "Boxes", "Wage"));
+        Table.append(String.format("%-4s%-4s%-10s%-6s%-8s\n", "ID","TL", "Name", "Boxes", "Wage"));
         for (Volunteer volunteer : Team)
         {
-            Table.append(String.format("%-6d%-10s%-6d%-7s\n", volunteer.getID(), volunteer.getName(), volunteer.getBoxes(), currencyFormat.format(volunteer.getWage())));
+            Table.append(String.format("%-4d%-4s%-10s%-6d%-8s\n", volunteer.getID(), volunteer.getTL(), volunteer.getName(), volunteer.getBoxes(), currencyFormat.format(volunteer.getWage())));
         }
         return Table;
     }
@@ -32,16 +33,22 @@ public class Team
     public StringBuilder getStats() // Gets the statistics of the team.
     {
         int totalBoxes = 0; // Stores the total amount of volunteers in the team.
+        int totalTeamLeaders = 0;
         double totalWage = 0; // Stores the total wage of the hole team.
         StringBuilder Stats = new StringBuilder(); // Stores stats of the team.
+        StringBuilder namesTL = new StringBuilder();
         for (Volunteer volunteer : Team)
         {
-            totalBoxes = totalBoxes + volunteer.getBoxes(); // Adds previous stored boxes to the current volunteers boxes to get the total amount of boxes.
-            totalWage = totalWage + volunteer.getWage(); // Adds previous stored wages to the current volunteers wage to get the total wage for the team.
+            if (Objects.equals(volunteer.getTL(), "*"))
+            {
+                totalTeamLeaders += 1;
+                namesTL.append(volunteer.getName()).append(",");
+            }
+            totalBoxes += volunteer.getBoxes(); // Adds previous stored boxes to the current volunteers boxes to get the total amount of boxes.
+            totalWage += volunteer.getWage(); // Adds previous stored wages to the current volunteers wage to get the total wage for the team.
         }
-        Stats.append(String.format("\nTotal Volunteers = %d\nTotal Boxes = %d\nTotal Wage = %s", Team.size(), totalBoxes, currencyFormat.format(totalWage))); // Creates String to show statistics of team and adds it to the rows.
+        Stats.append(String.format("\nTotal Volunteers = %d\nTotal Team leaders = %d\nTeam leaders names = %s\nTotal Boxes Delivered = %d\nTotal Wage = %s", Team.size(), totalTeamLeaders, namesTL, totalBoxes, currencyFormat.format(totalWage))); // Creates String to show statistics of team and adds it to the rows.
         return Stats;
-
     }
 
     public void sortByBoxes() // Sorts boxes in descending order.

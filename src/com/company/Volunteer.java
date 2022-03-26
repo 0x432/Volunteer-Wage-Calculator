@@ -1,9 +1,9 @@
 package com.company;
 
-public class Volunteer
+public class Volunteer // Class to represent the volunteers.
 {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
     private int boxes;
 
     public Volunteer(int id, String name, int boxes, int addBoxes) // Volunteer constructor.
@@ -41,6 +41,9 @@ public class Volunteer
         }
         return wage;
     }
+
+    public String getTL(){return "";}
+
     public Integer getID()
     {
         return id;
