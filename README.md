@@ -1,7 +1,7 @@
 ## Delivery-Tracking-System-Covid
 *Java Object Oriantation project for University Of Huddersfield By Caleb Bowden*
 
-#### Main Class
+### Main Class
 The main class performs as the backbone of the program, its purpose is to create volunteers, Team leaders, Teams and to also print out team statistics and sorted tables. However, none of the calculations are conducted here and are instead done within other classes related to sed classes purpose. The class acts as the structure / flow of the program.
 
 
@@ -35,9 +35,9 @@ Volunteer getWage | Team leader getWage
 ![Capture](https://user-images.githubusercontent.com/100306913/160257030-47969d86-f284-49c6-964e-ad6fcd284e4f.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160257137-fd6f0fb1-3055-4802-b7c2-1ee1bd9b847e.PNG)
 
 
-#### Teamleader Class
+### Teamleader Class
 
 
 
-#### Team Class
+### Team Class
 
