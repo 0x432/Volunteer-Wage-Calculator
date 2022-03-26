@@ -42,7 +42,7 @@ public class Volunteer // Class to represent the volunteers.
         return wage;
     }
 
-    public String getTL(){return "";}
+    public String getTL(){return "";} // Returns nothing to identify this is just a volunteer.
 
     public Integer getID()
     {
