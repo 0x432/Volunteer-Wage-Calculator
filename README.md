@@ -28,6 +28,8 @@ If the user has entered boxes to add to the volunteers total boxes the method up
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160256665-302de961-1e5b-408d-8dba-735068d8f921.PNG)
 
+A volunteer gets paid 0.15p for there first 50 boxes and then 0.20p for the rest. However if the volunteer is a team leader they get 20% ontop of this. the getWage method performs the required calculations to do this. Using a if statment we can check if the value of the boxes is less than or equal to 50 if this is true the required calculation is performed is false a different calculation will be preforemed then the wage will be retured to be used later.
+
 
 #### Teamleader Class
 
