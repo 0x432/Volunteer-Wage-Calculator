@@ -22,6 +22,10 @@ To make sure that only sesntible values are proesesed a check is performed to ch
 
 ![volchecnum](https://user-images.githubusercontent.com/100306913/160256545-9cd58132-42fb-4922-ad1f-021ae8bb1001.png)
 
+If the user has entered boxes to add to the volunteers total boxes the method update boxes is called which will add the previous boxes value to the value of the added boxes.
+
+![Capture](https://user-images.githubusercontent.com/100306913/160256665-302de961-1e5b-408d-8dba-735068d8f921.PNG)
+
 
 #### Teamleader Class
 
