@@ -24,3 +24,7 @@
 ![Picture3](https://user-images.githubusercontent.com/100306913/160293682-0a1acd07-9502-429d-a582-25c1b619ed47.png)
 
 **Calculate Wages** - The brief specified that a volunteer gets 0.15p for the first 50 boxes and then 0.20p for the rest. If the volunteer is a team leader, they get a 20% increase.  They are 2 wage calculations 1 in team leader class and the other in the volunteer class. They preform the same calculations just the team leader one adds 20% increase.
+
+Volunteer Calculation | Team Leader Calculation
+---|---
+![Picture4](https://user-images.githubusercontent.com/100306913/160293809-726251fd-3e43-43f4-a626-f611f9e39b07.png) | ![Picture5](https://user-images.githubusercontent.com/100306913/160293826-ebf058a8-8b98-4903-a30f-6149e26a7377.png)
