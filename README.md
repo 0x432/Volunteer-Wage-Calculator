@@ -4,6 +4,10 @@
 ### Main Class
 The main class performs as the backbone of the program, its purpose is to create volunteers, Team leaders, Teams and to also print out team statistics and sorted tables. However, none of the calculations are conducted here and are instead done within other classes related to sed classes purpose. The class acts as the structure / flow of the program.
 
+This like of code creates a team Object named T.
+
+![Capture](https://user-images.githubusercontent.com/100306913/160282515-fa115311-89ce-4365-92d0-03695536b57e.PNG)
+
 
 
 
