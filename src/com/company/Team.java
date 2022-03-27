@@ -33,10 +33,8 @@ public class Team // Class to represent the team.
     public StringBuilder getStats() // Gets the statistics of the team.
     {
         int totalBoxes = 0, totalTeamLeaders = 0;
-
         double totalWage = 0;
-        StringBuilder Stats = new StringBuilder(); // Stores stats of the team.
-        StringBuilder namesTL = new StringBuilder(); // Stores name of team leaders in the team.
+        StringBuilder Stats = new StringBuilder(), namesTL = new StringBuilder();
         for (Volunteer volunteer : Team) // Loops through the volunteers in the team.
         {
             if (Objects.equals(volunteer.getTL(), "*")) // If volunteer is a team leader.
