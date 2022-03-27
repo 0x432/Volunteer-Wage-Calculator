@@ -86,3 +86,7 @@ When a new team is created from the main page we use a contructor to create a ne
 to add a volunteer to the team we create a method which which gets the currency volunteer object and adds it to the team using the add function.
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160284883-b50d5125-82ee-47cb-9d9d-b3c73bb0d336.PNG)
+
+to create a clean table to show voluntteers we create a getTable method which makes a string builder object called table. A table header is formed hich is formatted to align values for the correct amount of space between, once the table header is formed it gets append to the table object. to get all the volunteers from the team arraylist we use a for loop wich shall loop thorught all the volunteers in the team during this loop we append a string to the table this string will be the a volunteer in the aray list, using the getID getName ect functions we can return the value of that volunteer inside the team array. Once all volunteers are accounted for the method reutrns the table.
+
+![Capture](https://user-images.githubusercontent.com/100306913/160286343-0554efe2-1477-4b38-a637-df45bf9c0fc0.PNG)
