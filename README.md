@@ -91,7 +91,7 @@ to create a clean table to show voluntteers we create a getTable method which ma
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160286343-0554efe2-1477-4b38-a637-df45bf9c0fc0.PNG)
 
-
+The get stats method functions the same way as the get table method, as it returns a clean value, loops throught the volunteers in the team and appends to a string builder object. Hoever this time we must create values to store the statistics in. First some varibles are created total boxes, total team leaders, total wages these will store that amounts. A loop will be conducted to chec the volunteers and it will add the amount of that volunteer to the declared varibles. once this is done the methd will return the statistscs object to be used.
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160286496-dbee5e84-7537-4137-847c-f07edb05f5c3.PNG)
 
