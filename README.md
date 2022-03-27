@@ -95,6 +95,6 @@ The get stats method functions the same way as the get table method, as it retur
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160286496-dbee5e84-7537-4137-847c-f07edb05f5c3.PNG)
 
-
+Most of the sorting methods use the same format, the team arraylist is sorted by using the .sort function, then we create 2 new volunteer objects copied from the origons and we can compre them to each other and using the getboxes functions to define what we are comparing. To sort the volunteers alphabetically we use the same conspect but we use a comparator.
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160286546-2b5d1f5e-0615-4492-b3d4-0df791962623.PNG)
