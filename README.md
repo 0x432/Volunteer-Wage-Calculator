@@ -8,9 +8,13 @@ This line of code creates a team Object named T.
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160282515-fa115311-89ce-4365-92d0-03695536b57e.PNG)
 
-To create a team leader and add them to the team we need to called the addvolunteer method within the teamc class, we also need to created a new team leader object which is basically the same as the volunteer class.
+To create a team leader and add them to the team we need to called the addvolunteer method within the teamc class, we also need to created a new team leader object which is basically the same as the volunteer class. 
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160282621-728c0a36-71ea-4d3d-9c96-7c8219a874f8.PNG)
+
+this is to create a new volunteer which follows the same principles as the team leader class.
+
+![Capture](https://user-images.githubusercontent.com/100306913/160282822-77a83a4b-11c5-4c73-9132-8da1ee881d61.PNG)
 
 
 ### Volunteer Class
