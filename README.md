@@ -2,7 +2,7 @@
 *Java Object Oriantation project for University Of Huddersfield By Caleb Bowden*
 
 ## Main Class
-The main class performs as the backbone of the program, its purpose is to create volunteers, Team leaders, Teams and to also print out team statistics and sorted tables. However, none of the calculations are conducted here and are instead done within other classes related to sed classes purpose. The class acts as the structure / flow of the program.
+The main class performs as the backbone of the program, its purpose is to create volunteers, Team leaders, Teams and to also print out team statistics and sorted tables.
 
 This line of code creates a team Object named T.
 
@@ -36,7 +36,6 @@ Volunteers are essiential to the program, this class is responsible for all the 
 This is were volunteer data is stored and the data format it needs.
 
 ![VolunterValues](https://user-images.githubusercontent.com/100306913/160255615-10eb4bfd-988d-4ecf-a9d5-b3b010030c27.png)
-
 
 A volunteer constructor is designed to get the data required check for errors and then stores these values in the volunteer class
 
@@ -98,3 +97,9 @@ The get stats method functions the same way as the get table method, as it retur
 Most of the sorting methods use the same format, the team arraylist is sorted by using the .sort function, then we create 2 new volunteer objects copied from the origons and we can compre them to each other and using the getboxes functions to define what we are comparing. To sort the volunteers alphabetically we use the same conspect but we use a comparator.
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160286546-2b5d1f5e-0615-4492-b3d4-0df791962623.PNG)
+
+
+## Test
+Not sorted | Sorted by wage | Sorted by boxes | Sorted alphabetically  | Statistics
+--- | ---  | ---  | ---  | --- 
+![Capture](https://user-images.githubusercontent.com/100306913/160288321-27927a1c-e858-458b-bfca-937f3e22dad2.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160288339-f4d7422a-6dff-43d7-ba0f-9c0e7db47480.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160288362-531fc77e-ade3-4e81-9fa3-251ac8938df4.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160288375-1953bfe1-a855-4318-908b-eb6a23f00637.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160288406-107fcc92-f984-4684-a8a7-3ca238cda708.PNG)
