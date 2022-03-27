@@ -78,3 +78,7 @@ This creates an array list which stores all the volunteers.
 To make sure that wages are in a readable currency format, we create a currency format object to get the local instance. this rounds number to 2 decimal place and adds the local currency symbol.
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160284498-30ca7585-8437-4975-8306-fe696d21bdb2.PNG)
+
+When a new team is created from the main page we use a contructor to create a new arraylist to add the volunteers.
+d
+![Capture](https://user-images.githubusercontent.com/100306913/160284705-bd262275-ab2c-4464-9616-940f694356c8.PNG)
