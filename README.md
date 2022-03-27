@@ -20,6 +20,11 @@ To print out the volunteers in a clean table we must call the getTable method wh
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160282916-a2969445-595c-40bf-a178-20ded9c8d4e4.PNG)
 
+For the program to sort these volunteers we must call the sort methods they are 3 methods sort by wage, sort by boxes delivered and sort alphabetically. we can call these methods then use the getTable method above to print the sorted table out.
+
+![Capture](https://user-images.githubusercontent.com/100306913/160283020-af2a437f-6422-4d64-8590-01e53ec1298f.PNG)
+![Capsture](https://user-images.githubusercontent.com/100306913/160283021-439f1de5-08f2-475a-93c7-8bbd3a19a1e6.PNG)
+![Captussre](https://user-images.githubusercontent.com/100306913/160283022-3f305cf5-38b4-4ac5-b32d-4d4a876a8e55.PNG)
 
 ### Volunteer Class
 Volunteers are essiential to the program, this class is responsible for all the volunteer methods, this class is used to store volunteeres data, caluclate wages and to calculate boxes. There are also get methods which allow us to get data from that volunteer within another class at anytime.
@@ -59,4 +64,5 @@ Because the Team leader classes is basically identical to the volunteer class we
 
 
 ### Team Class
+
 
