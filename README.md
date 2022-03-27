@@ -1,7 +1,7 @@
-## Delivery-Tracking-System-Covid
+# Java Project 1
 *Java Object Oriantation project for University Of Huddersfield By Caleb Bowden*
 
-### Main Class
+## Main Class
 The main class performs as the backbone of the program, its purpose is to create volunteers, Team leaders, Teams and to also print out team statistics and sorted tables. However, none of the calculations are conducted here and are instead done within other classes related to sed classes purpose. The class acts as the structure / flow of the program.
 
 This line of code creates a team Object named T.
@@ -30,7 +30,7 @@ Once all the data has been sorted and printed it will be usefull to get statisti
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160283368-9c761d46-c70e-471a-ab98-74c6a10e06c2.PNG)
 
-### Volunteer Class
+## Volunteer Class
 Volunteers are essiential to the program, this class is responsible for all the volunteer methods, this class is used to store volunteeres data, caluclate wages and to calculate boxes. There are also get methods which allow us to get data from that volunteer within another class at anytime.
 
 This is were volunteer data is stored and the data format it needs.
@@ -61,13 +61,13 @@ An important function of any class is to return values that have been stored wit
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160257283-02052c66-9e33-4b97-b225-9600cb6fcc9c.PNG)
 
-### Team Leader Class
+## Team Leader Class
 Because the Team leader classes is basically identical to the volunteer class we can inherit the volunteer class within the team leader class. This means that when a new team leader is created the construcutor will ask for the same values as the volunter contructor and use super() for encapsualation. The only difference between these 2 classes is the getTL method which reutirns * because they are a team leader and the getWage method which needs to add an extra 20% onto there wage because they are a team leader.
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160257601-f8a5103a-4eed-4242-89de-eb87a1308995.PNG)
 
 
 
-### Team Class
+## Team Class
 
 
