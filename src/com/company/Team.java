@@ -6,18 +6,18 @@ import java.util.Objects;
 
 public class Team // Class to represent the team.
 {
-    ArrayList<Volunteer> Team; // Creates an arraylist of volunteers and calling it team.
-    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(); // Formats currency to have a currency symbol.
+        ArrayList<Volunteer> Team; // Creates an arraylist of volunteers and calling it team.
+        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(); // Formats currency to have a currency symbol.
 
     public Team()
-    {
-        this.Team = new ArrayList<>();
-    } // Team constructor.
+        {
+            this.Team = new ArrayList<>();
+        } // Team constructor.
 
-    public void addVolunteers(Volunteer V) // Adds volunteer to team.
-    {
-        Team.add(V);
-    }
+        public void addVolunteers(Volunteer V) // Adds volunteer to team.
+        {
+            Team.add(V);
+        }
 
     public StringBuilder getTable() // Returns a table of volunteers in the team.
     {
@@ -32,9 +32,9 @@ public class Team // Class to represent the team.
 
     public StringBuilder getStats() // Gets the statistics of the team.
     {
-        int totalBoxes = 0; // Stores the total amount of volunteers in the team.
-        int totalTeamLeaders = 0; // Stores the total amount of team leaders in the team.
-        double totalWage = 0; // Stores the total wage of the hole team.
+        int totalBoxes = 0, totalTeamLeaders = 0;
+
+        double totalWage = 0;
         StringBuilder Stats = new StringBuilder(); // Stores stats of the team.
         StringBuilder namesTL = new StringBuilder(); // Stores name of team leaders in the team.
         for (Volunteer volunteer : Team) // Loops through the volunteers in the team.
