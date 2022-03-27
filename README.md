@@ -18,3 +18,9 @@
 **Update Boxes** - To update the boxes we must add the previous boxes to the boxes to add amount and then use .this to update that volunteers boxes.
 
 ![Picture2](https://user-images.githubusercontent.com/100306913/160293627-c139d7b9-d9c5-4f85-a074-d92a4e8bdf65.png)
+
+**Getting Values** - there are a variety of get methods used these methods are simple and just return the data from that class.
+
+![Picture3](https://user-images.githubusercontent.com/100306913/160293682-0a1acd07-9502-429d-a582-25c1b619ed47.png)
+
+**Calculate Wages** - The brief specified that a volunteer gets 0.15p for the first 50 boxes and then 0.20p for the rest. If the volunteer is a team leader, they get a 20% increase.  They are 2 wage calculations 1 in team leader class and the other in the volunteer class. They preform the same calculations just the team leader one adds 20% increase.
