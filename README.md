@@ -26,6 +26,10 @@ For the program to sort these volunteers we must call the sort methods they are 
 ![Capsture](https://user-images.githubusercontent.com/100306913/160283021-439f1de5-08f2-475a-93c7-8bbd3a19a1e6.PNG)
 ![Captussre](https://user-images.githubusercontent.com/100306913/160283022-3f305cf5-38b4-4ac5-b32d-4d4a876a8e55.PNG)
 
+Once all the data has been sorted and printed it will be usefull to get statistics of the team to do this we call the getStats method which reutrns satistics of the team.
+
+![Capture](https://user-images.githubusercontent.com/100306913/160283368-9c761d46-c70e-471a-ab98-74c6a10e06c2.PNG)
+
 ### Volunteer Class
 Volunteers are essiential to the program, this class is responsible for all the volunteer methods, this class is used to store volunteeres data, caluclate wages and to calculate boxes. There are also get methods which allow us to get data from that volunteer within another class at anytime.
 
@@ -42,7 +46,8 @@ To make sure that only sesntible values are proesesed a check is performed to ch
 
 ![volchecnum](https://user-images.githubusercontent.com/100306913/160256545-9cd58132-42fb-4922-ad1f-021ae8bb1001.png)
 
-If the user has entered boxes to add to the volunteers total boxes the method update boxes is called which will add the previous boxes value to the value of the added boxes.
+If the user has entered boxes to add to the volunteers total boxes the method update boxes is called which will add the previous boxes value t![Capture](https://user-images.githubusercontent.com/100306913/160283330-131ae86f-daef-4bd7-bcda-3a9f4a51fba0.PNG)
+o the value of the added boxes.
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160256665-302de961-1e5b-408d-8dba-735068d8f921.PNG)
 
