@@ -10,3 +10,11 @@
 
 **Team Leader** - Because the team leader class is the same as the volunteer class with a few minor changes to the wage calculation and how it returns true for the team leader, its best to inherit the volunteer class this makes it, so you do not have to copy code.
 
+### Methods Used
+**Constructor** - A constructor initialise the classes, they are used to add volunteer values when a new volunteer object is created. There is another constructor used in the Team class where a new array list is created for the team. 
+
+![Picture1](https://user-images.githubusercontent.com/100306913/160293606-558582af-3409-4f17-8367-ec39e684b59d.png)
+
+**Update Boxes** - To update the boxes we must add the previous boxes to the boxes to add amount and then use .this to update that volunteers boxes.
+
+![Picture2](https://user-images.githubusercontent.com/100306913/160293627-c139d7b9-d9c5-4f85-a074-d92a4e8bdf65.png)
