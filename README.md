@@ -103,3 +103,7 @@ Most of the sorting methods use the same format, the team arraylist is sorted by
 Not sorted | Sorted by wage | Sorted by boxes | Sorted alphabetically  | Statistics
 --- | ---  | ---  | ---  | --- 
 ![Capture](https://user-images.githubusercontent.com/100306913/160288321-27927a1c-e858-458b-bfca-937f3e22dad2.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160288339-f4d7422a-6dff-43d7-ba0f-9c0e7db47480.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160288362-531fc77e-ade3-4e81-9fa3-251ac8938df4.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160288375-1953bfe1-a855-4318-908b-eb6a23f00637.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160288406-107fcc92-f984-4684-a8a7-3ca238cda708.PNG)
+
+Sorted by boxes | Sorted alphabetically
+--- | --- 
+![Capture](https://user-images.githubusercontent.com/100306913/160288362-531fc77e-ade3-4e81-9fa3-251ac8938df4.PNG) | ![Capture](https://user-images.githubusercontent.com/100306913/160288375-1953bfe1-a855-4318-908b-eb6a23f00637.PNG)
