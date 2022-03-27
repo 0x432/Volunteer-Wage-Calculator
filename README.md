@@ -16,6 +16,10 @@ this is to create a new volunteer which follows the same principles as the team 
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160282822-77a83a4b-11c5-4c73-9132-8da1ee881d61.PNG)
 
+To print out the volunteers in a clean table we must call the getTable method which is located within the team class we can call this method which will return a table in which we can print out for the user to see.
+
+![Capture](https://user-images.githubusercontent.com/100306913/160282916-a2969445-595c-40bf-a178-20ded9c8d4e4.PNG)
+
 
 ### Volunteer Class
 Volunteers are essiential to the program, this class is responsible for all the volunteer methods, this class is used to store volunteeres data, caluclate wages and to calculate boxes. There are also get methods which allow us to get data from that volunteer within another class at anytime.
