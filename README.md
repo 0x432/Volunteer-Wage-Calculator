@@ -69,5 +69,12 @@ Because the Team leader classes is basically identical to the volunteer class we
 
 
 ## Team Class
+This class is respensibe for sorting and creating team.
 
+This creates an array list which stores all the volunteers.
 
+![Capture](https://user-images.githubusercontent.com/100306913/160284451-58412bf3-b4a2-45a7-99a5-2a5a4cdc964d.PNG)
+
+To make sure that wages are in a readable currency format, we create a currency format object to get the local instance. this rounds number to 2 decimal place and adds the local currency symbol.
+
+![Capture](https://user-images.githubusercontent.com/100306913/160284498-30ca7585-8437-4975-8306-fe696d21bdb2.PNG)
