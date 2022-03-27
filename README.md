@@ -82,3 +82,7 @@ To make sure that wages are in a readable currency format, we create a currency 
 When a new team is created from the main page we use a contructor to create a new arraylist to add the volunteers.
 
 ![Capture](https://user-images.githubusercontent.com/100306913/160284705-bd262275-ab2c-4464-9616-940f694356c8.PNG)
+
+to add a volunteer to the team we create a method which which gets the currency volunteer object and adds it to the team using the add function.
+
+![Capture](https://user-images.githubusercontent.com/100306913/160284883-b50d5125-82ee-47cb-9d9d-b3c73bb0d336.PNG)
