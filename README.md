@@ -28,3 +28,15 @@
 Volunteer Calculation | Team Leader Calculation
 ---|---
 ![Picture4](https://user-images.githubusercontent.com/100306913/160293809-726251fd-3e43-43f4-a626-f611f9e39b07.png) | ![Picture5](https://user-images.githubusercontent.com/100306913/160293826-ebf058a8-8b98-4903-a30f-6149e26a7377.png)
+
+**Sorting volunteers** - To sort volunteer we get the array list and use sort to create 2 new objects of the volunteer and compares them to each other.
+
+![Picture5](https://user-images.githubusercontent.com/100306913/160613750-4d8e61f9-50fe-43c4-ab2b-081e71ac2a65.png)
+
+*8Getting table / Stats** - To create a clean table we loop through all the volunteers in the list and create a new row for each volunteer and append it to a string that will be returned. This is the same for stats, but we must declare values for total wages and boxes.
+
+![Picture2](https://user-images.githubusercontent.com/100306913/160613855-35ec86a7-273e-425a-8c0b-d9a4ccd3d8c3.png)
+![Picture3](https://user-images.githubusercontent.com/100306913/160613929-0b2a6071-4187-4a27-b378-ab33718fb31d.png)
+
+### Testing Phase
+During this stage I came across some issues that could occur if the user enters values that are not suitable for example 0 or less than.  To combat this, I created a function within the volunteer class that checks if the value is less than or equal to 0. If this value is unsuitable, it will give an error and the program will exit.
