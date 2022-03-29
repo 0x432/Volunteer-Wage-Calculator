@@ -41,6 +41,10 @@ Volunteer Calculation | Team Leader Calculation
 ### Testing Phase
 During this stage I came across some issues that could occur if the user enters values that are not suitable for example 0 or less than.  To combat this, I created a function within the volunteer class that checks if the value is less than or equal to 0. If this value is unsuitable, it will give an error and the program will exit.
 
+Volunteers sorted by boxes delivered | Volunteers sorted alphabetically | Volunteers Not Sorted | Volunteers Sorted by wage
+---|---|---|---
+![Picture8](https://user-images.githubusercontent.com/100306913/160616947-076cb900-b3c8-4d58-8e40-c1b9a077155e.png) |![Picture9](https://user-images.githubusercontent.com/100306913/160617039-4c531dda-5446-44b8-b612-23c34a8d32e8.png) | ![Picture10](https://user-images.githubusercontent.com/100306913/160617463-d41aca25-f3e9-413a-b823-55bad563bb7e.png) | ![Picture11](https://user-images.githubusercontent.com/100306913/160617531-b29a6bc3-a90a-409d-94ab-b02a088ce6b0.png)
+
 Input incorrect values for add boxes | 
 :---:|
 ![Picture4](https://user-images.githubusercontent.com/100306913/160614849-b5fa25f4-ba33-4be5-94fc-b59bb921b1f2.png) |
@@ -57,14 +61,7 @@ Code |
 ---|
 ![Picture7](https://user-images.githubusercontent.com/100306913/160616693-1546ac61-d71a-47e9-b569-a7c12e5d0342.png)
 
-Volunteers sorted by boxes delivered | Volunteers sorted alphabetically
----|---
-![Picture8](https://user-images.githubusercontent.com/100306913/160616947-076cb900-b3c8-4d58-8e40-c1b9a077155e.png) |![Picture9](https://user-images.githubusercontent.com/100306913/160617039-4c531dda-5446-44b8-b612-23c34a8d32e8.png)
-
-Volunteers Not Sorted | Volunteers Sorted by wage
----|---
-![Picture10](https://user-images.githubusercontent.com/100306913/160617463-d41aca25-f3e9-413a-b823-55bad563bb7e.png) | ![Picture11](https://user-images.githubusercontent.com/100306913/160617531-b29a6bc3-a90a-409d-94ab-b02a088ce6b0.png)
-
 Team Statistics | 
 ---|
 ![Picture12](https://user-images.githubusercontent.com/100306913/160617644-3f9a4999-43f8-4da6-8282-0c41c51a3418.png)
+
