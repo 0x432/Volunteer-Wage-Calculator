@@ -59,5 +59,12 @@ Code |
 
 Volunteers sorted by boxes delivered | Volunteers sorted alphabetically
 ---|---
-[Picture8](https://user-images.githubusercontent.com/100306913/160616947-076cb900-b3c8-4d58-8e40-c1b9a077155e.png) |
-![Picture9](https://user-images.githubusercontent.com/100306913/160617039-4c531dda-5446-44b8-b612-23c34a8d32e8.png)
+![Picture8](https://user-images.githubusercontent.com/100306913/160616947-076cb900-b3c8-4d58-8e40-c1b9a077155e.png) |![Picture9](https://user-images.githubusercontent.com/100306913/160617039-4c531dda-5446-44b8-b612-23c34a8d32e8.png)
+
+Volunteers Not Sorted | Volunteers Sorted by wage
+---|---
+![Picture10](https://user-images.githubusercontent.com/100306913/160617463-d41aca25-f3e9-413a-b823-55bad563bb7e.png) | ![Picture11](https://user-images.githubusercontent.com/100306913/160617531-b29a6bc3-a90a-409d-94ab-b02a088ce6b0.png)
+
+Team Statistics | 
+---|
+![Picture12](https://user-images.githubusercontent.com/100306913/160617644-3f9a4999-43f8-4da6-8282-0c41c51a3418.png)
