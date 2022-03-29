@@ -40,3 +40,20 @@ Volunteer Calculation | Team Leader Calculation
 
 ### Testing Phase
 During this stage I came across some issues that could occur if the user enters values that are not suitable for example 0 or less than.  To combat this, I created a function within the volunteer class that checks if the value is less than or equal to 0. If this value is unsuitable, it will give an error and the program will exit.
+
+Input incorrect values for add boxes | 
+---|
+![Picture4](https://user-images.githubusercontent.com/100306913/160614849-b5fa25f4-ba33-4be5-94fc-b59bb921b1f2.png) |
+Program Output |
+![Picture5](https://user-images.githubusercontent.com/100306913/160615251-8f25483a-4686-40ea-baff-ae92ef187636.png)
+
+Input correct values for boxes | 
+---|
+![Picture6](https://user-images.githubusercontent.com/100306913/160616491-351080c2-f121-4230-9486-4e4caa0c381f.png) |
+Program Output |
+![Picture5](https://user-images.githubusercontent.com/100306913/160615251-8f25483a-4686-40ea-baff-ae92ef187636.png)
+
+Code | 
+---|
+![Picture7](https://user-images.githubusercontent.com/100306913/160616693-1546ac61-d71a-47e9-b569-a7c12e5d0342.png)
+
