@@ -33,7 +33,7 @@ Volunteer Calculation | Team Leader Calculation
 
 ![Picture5](https://user-images.githubusercontent.com/100306913/160613750-4d8e61f9-50fe-43c4-ab2b-081e71ac2a65.png)
 
-*8Getting table / Stats** - To create a clean table we loop through all the volunteers in the list and create a new row for each volunteer and append it to a string that will be returned. This is the same for stats, but we must declare values for total wages and boxes.
+**Getting table / Stats** - To create a clean table we loop through all the volunteers in the list and create a new row for each volunteer and append it to a string that will be returned. This is the same for stats, but we must declare values for total wages and boxes.
 
 ![Picture2](https://user-images.githubusercontent.com/100306913/160613855-35ec86a7-273e-425a-8c0b-d9a4ccd3d8c3.png)
 ![Picture3](https://user-images.githubusercontent.com/100306913/160613929-0b2a6071-4187-4a27-b378-ab33718fb31d.png)
