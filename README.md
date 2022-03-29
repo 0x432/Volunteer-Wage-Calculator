@@ -1,7 +1,7 @@
 # Java Project 1
 *Java Object Oriantation project for University Of Huddersfield By Caleb Bowden*
 
-### Classes
+ ### **<ins>Classes</ins>** ### 
 **Main** - The Main class is responsible for the flow of the program it is used to add volunteers, teams, and team leaders. It acts as the backbone, as it provides all the data, and all methods are called here.
 
 **Team** - This class responsibility is to create a team and store the volunteers. The class also sorts volunteers and creates a clean table that can be returned using a method.
@@ -10,7 +10,7 @@
 
 **Team Leader** - Because the team leader class is the same as the volunteer class with a few minor changes to the wage calculation and how it returns true for the team leader, its best to inherit the volunteer class this makes it, so you do not have to copy code.
 
-### Methods Used
+### **<ins>Methods Used</ins>** ### 
 **Constructor** - A constructor initialise the classes, they are used to add volunteer values when a new volunteer object is created. There is another constructor used in the Team class where a new array list is created for the team. 
 
 ![Picture1](https://user-images.githubusercontent.com/100306913/160293606-558582af-3409-4f17-8367-ec39e684b59d.png)
@@ -38,7 +38,7 @@ Volunteer Calculation | Team Leader Calculation
 ![Picture2](https://user-images.githubusercontent.com/100306913/160613855-35ec86a7-273e-425a-8c0b-d9a4ccd3d8c3.png)
 ![Picture3](https://user-images.githubusercontent.com/100306913/160613929-0b2a6071-4187-4a27-b378-ab33718fb31d.png)
 
-### Testing Phase
+### **<ins>Testing Phase</ins>** ### 
 During this stage I came across some issues that could occur if the user enters values that are not suitable for example 0 or less than.  To combat this, I created a function within the volunteer class that checks if the value is less than or equal to 0. If this value is unsuitable, it will give an error and the program will exit.
 
 Volunteers sorted by boxes delivered | Volunteers sorted alphabetically | Volunteers Not Sorted | Volunteers Sorted by wage
