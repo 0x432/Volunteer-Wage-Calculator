@@ -2,51 +2,86 @@ package com.company;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Objects;
 
 public class Team // Class to represent the team.
 {
-        ArrayList<Volunteer> Team; // Creates an arraylist of volunteers and calling it team.
-        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(); // Formats currency to have a currency symbol.
+    ArrayList<Volunteer> Team; // Creates an arraylist of volunteers and calling it team.
+    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(); // Formats currency to have a currency symbol.
 
     public Team()
         {
             this.Team = new ArrayList<>();
         } // Team constructor.
 
-        public void addVolunteers(Volunteer V) // Adds volunteer to team.
-        {
-            Team.add(V);
-        }
-
-    public StringBuilder getTable() // Returns a table of volunteers in the team.
+    public void addVolunteers(Volunteer V) // Adds volunteer to team.
     {
-        StringBuilder Table = new StringBuilder(); // Creates a new string builder object called table.
-        Table.append(String.format("%-4s%-4s%-10s%-6s%-8s\n", "ID","TL", "Name", "Boxes", "Wage")); // Creating the table header.
-        for (Volunteer volunteer : Team) // Loops through the volunteers in the team.
-        {
-            Table.append(String.format("%-4d%-4s%-10s%-6d%-8s\n", volunteer.getID(), volunteer.getTL(), volunteer.getName(), volunteer.getBoxes(), currencyFormat.format(volunteer.getWage()))); // Creates String to show volunteers of team and adds it to the rows.
-        }
-        return Table; // Returns a clean table of all the volunteers to be printed out.
+        Team.add(V);
     }
 
-    public StringBuilder getStats() // Gets the statistics of the team.
-    {
-        int totalBoxes = 0, totalTeamLeaders = 0;
-        double totalWage = 0;
-        StringBuilder Stats = new StringBuilder(), namesTL = new StringBuilder();
-        for (Volunteer volunteer : Team) // Loops through the volunteers in the team.
+    public String getAllVolunteers(){
+        StringBuilder sb = new StringBuilder();
+        for(Volunteer v : Team)
         {
-            if (Objects.equals(volunteer.getTL(), "*")) // If volunteer is a team leader.
-            {
-                totalTeamLeaders += 1; // Adds team leaders by 1 and the total.
-                namesTL.append(volunteer.getName()).append(","); // Saves the team leaders name in the string builder.
-            }
-            totalBoxes += volunteer.getBoxes(); // Adds previous stored boxes to the current volunteers boxes to get the total amount of boxes.
-            totalWage += volunteer.getWage(); // Adds previous stored wages to the current volunteers wage to get the total wage for the team.
+            sb.append(v.display());
         }
-        Stats.append(String.format("\nTotal Volunteers = %d\nTotal Team leaders = %d\nTeam leaders names = %s\nTotal Boxes Delivered = %d\nTotal Wage = %s", Team.size(), totalTeamLeaders, namesTL, totalBoxes, currencyFormat.format(totalWage))); // Creates String to show statistics of team and adds it to the rows.
-        return Stats; // Returns the stats of the team to be printed out.
+        return sb.toString();
+    }
+
+    public int getTotalTeamLeaders(){
+        int cnt = 0;
+        for (Volunteer V : Team)
+        {
+            if (V instanceof TeamLeader)
+            {
+                cnt += 1;
+            }
+        }
+        return cnt;
+    }
+
+    public int getTotalVolunteers(){
+        return getTotalTeamMembers() - getTotalTeamLeaders();
+    }
+
+    public int getTotalTeamMembers(){
+        return Team.size();
+    }
+
+    public int getTotalBoxes(){
+        int cnt = 0;
+        for(Volunteer V : Team)
+        {
+            cnt += V.getBoxes();
+        }
+        return cnt;
+    }
+
+    public double getTotalWage(){
+        int cnt = 0;
+        for (Volunteer V : Team)
+        {
+            cnt += V.getWage();
+        }
+        return cnt;
+    }
+
+    public String getTeamLeadersNames(){
+        StringBuilder sb = new StringBuilder();
+        for(Volunteer V : Team)
+        {
+            if (V instanceof TeamLeader)
+            {
+                sb.append(V.getName());
+                sb.append(", ");
+            }
+        }
+        return sb.toString();
+    }
+
+    public String getTeamStats(){
+        String r = String.format("Total Team Members: %d\nTotal Volunteers: %d\nTotal Team leaders: %d\nTeam leaders names: %s\nTotal Boxes Delivered: %d\nTotal wage: %s",
+                getTotalTeamMembers() ,getTotalVolunteers() , getTotalTeamLeaders() ,getTeamLeadersNames() ,getTotalBoxes(), currencyFormat.format(getTotalWage()));
+        return r;
     }
 
     public void sortByBoxes() // Sorts boxes in descending order.

@@ -1,10 +1,14 @@
 package com.company;
 
+import java.text.NumberFormat;
+
 public class Volunteer // Class to represent the volunteers.
 {
     private final int id;
     private final String name;
     private int boxes;
+
+    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(); // Formats currency to have a currency symbol.
 
     public Volunteer(int id, String name, int boxes, int addBoxes) // Volunteer constructor.
     {
@@ -15,6 +19,14 @@ public class Volunteer // Class to represent the volunteers.
         this.boxes = boxes;
         updateBoxes(addBoxes);
     }
+
+
+    public String display(){
+        String r = String.format("\nID: %-2d | Team leader: No | Name: %-15s | Boxes: %-12d | Wage: %-12s |",
+                getID(), getName(),getBoxes(),currencyFormat.format(getWage()));
+        return r;
+    }
+
     public void checkNumeric(int value) // Checks of the value is less than or equal to 0.
     {
         if (value <= 0)
@@ -39,6 +51,10 @@ public class Volunteer // Class to represent the volunteers.
         {
             wage = ((getBoxes() - 50) * 0.20) + (0.15 * 50);
         }
+        if (this instanceof TeamLeader)
+        {
+            wage = wage * 1.2;
+        }
         return wage;
     }
 
@@ -56,4 +72,5 @@ public class Volunteer // Class to represent the volunteers.
     public Integer getBoxes(){
         return boxes;
     } // Returns the boxes of volunteer.
+
 }
