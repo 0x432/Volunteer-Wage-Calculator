@@ -26,6 +26,11 @@ public class Volunteer // Class to represent the volunteers.
         updateBoxes(checkInteger(String.valueOf(addBoxes)));
     }
 
+    public String display() {
+        return String.format("\nID: %-2d | Team leader: No | Name: %-15s | Boxes: %-12d | Wage: %-12s |",
+                getID(), getName(),getBoxes(),currencyFormat.format(getWage()));
+    }
+
     public int checkInteger(String input) {
         Scanner s1 = new Scanner(System.in);
         while (true) {
@@ -56,10 +61,5 @@ public class Volunteer // Class to represent the volunteers.
             wage = ((getBoxes() - 50) * 0.20) + (0.15 * 50);
         }
         return wage;
-    }
-
-    public String display() {
-        return String.format("\nID: %-2d | Team leader: No | Name: %-15s | Boxes: %-12d | Wage: %-12s |",
-                getID(), getName(),getBoxes(),currencyFormat.format(getWage()));
     }
 }
