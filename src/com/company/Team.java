@@ -65,7 +65,7 @@ public class Team // Class to represent the team.
         StringBuilder sb = new StringBuilder();
         for(Volunteer V : Team) {
             if (V instanceof TeamLeader) {
-                sb.append(V.getName() + ", ");
+                sb.append(V.getName()).append(", ");
             }
         }
         return sb.toString();
