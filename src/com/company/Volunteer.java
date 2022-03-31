@@ -1,47 +1,51 @@
 package com.company;
 
 import java.text.NumberFormat;
+import java.util.Scanner;
 
 public class Volunteer // Class to represent the volunteers.
 {
+    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(); // Formats currency to have a currency symbol.
+
     private final int id;
     private final String name;
     private int boxes;
 
-    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(); // Formats currency to have a currency symbol.
+    public Integer getID() { return id; } // Returns the id of volunteer.
 
-    public Volunteer(int id, String name, int boxes, int addBoxes) // Volunteer constructor.
-    {
-        checkNumeric(id);
-        checkNumeric(boxes);
-        this.id = id;
+    public String getName() { return name; } // Returns the name of volunteer.
+
+    public Integer getBoxes() { return boxes; } // Returns the boxes of volunteer.
+
+    public void updateBoxes(int newBoxes) { this.boxes = newBoxes + boxes; } // Calculates the new box total.
+
+    public Volunteer(int id, String name, int boxes, int addBoxes){ // Volunteer constructor.
         this.name = name;
-        this.boxes = boxes;
-        updateBoxes(addBoxes);
+        this.id = checkInteger(String.valueOf(id));
+        this.boxes = checkInteger(String.valueOf(boxes));
+        updateBoxes(checkInteger(String.valueOf(addBoxes)));
     }
 
-
-    public String display(){
-        String r = String.format("\nID: %-2d | Team leader: No | Name: %-15s | Boxes: %-12d | Wage: %-12s |",
-                getID(), getName(),getBoxes(),currencyFormat.format(getWage()));
-        return r;
-    }
-
-    public void checkNumeric(int value) // Checks of the value is less than or equal to 0.
-    {
-        if (value <= 0)
-        {
-            System.out.println("Error, you cannot enter a value less than or equal to 0");
-            System.exit(1);
+    public int checkInteger(String input) {
+        Scanner s1 = new Scanner(System.in);
+        while (true) {
+            try {
+                if (Integer.parseInt(input) >= 0) {
+                    return Integer.parseInt(input);
+                }
+                else {
+                    System.out.format("Error, volunteer %s cannot have negative Boxes\nTry again: ",this.name);
+                    input = s1.nextLine();
+                }
+            }
+            catch (NumberFormatException e) {
+                System.out.format("Error, volunteer %s Boxes must be integer values\nTry again: ",this.name);
+                input = s1.nextLine();
+            }
         }
     }
-    public void updateBoxes(int newBoxes) // Calculates the new box total.
-    {
-        checkNumeric(newBoxes);
-        this.boxes = newBoxes + boxes;
-    }
-    public Double getWage() // Calculates and then returns the wage of volunteer.
-    {
+
+    public Double getWage(){ // Calculates and then returns the wage of volunteer.
         double wage;
         if (getBoxes() <= 50)
         {
@@ -51,26 +55,11 @@ public class Volunteer // Class to represent the volunteers.
         {
             wage = ((getBoxes() - 50) * 0.20) + (0.15 * 50);
         }
-        if (this instanceof TeamLeader)
-        {
-            wage = wage * 1.2;
-        }
         return wage;
     }
 
-    public String getTL(){return "";} // Returns nothing to identify this is just a volunteer.
-
-    public Integer getID()
-    {
-        return id;
-    } // Returns the id of volunteer.
-
-    public String getName(){
-        return name;
-    } // Returns the name of volunteer.
-
-    public Integer getBoxes(){
-        return boxes;
-    } // Returns the boxes of volunteer.
-
+    public String display() {
+        return String.format("\nID: %-2d | Team leader: No | Name: %-15s | Boxes: %-12d | Wage: %-12s |",
+                getID(), getName(),getBoxes(),currencyFormat.format(getWage()));
+    }
 }
