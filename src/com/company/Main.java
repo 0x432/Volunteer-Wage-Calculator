@@ -13,18 +13,18 @@ public class Main
         T.addVolunteers(new Volunteer(5, "Ayub", 129,39));
         T.addVolunteers(new Volunteer(6, "Tony", 17,106));
 
-        System.out.println("_____________________________________________________________________________________________\nNot sorted");
+        System.out.format("_____________________________________________________________________________________________\n%50s %42s","NOT SORTED","|");
         System.out.println(T.getAllVolunteers()); // Printing out the table.
-        System.out.println("_____________________________________________________________________________________________\nSorted by highest wage");
+        System.out.format("_____________________________________________________________________________________________\n%60s %32s","SORTED BY WAGE DESCENDING ORDER","|");
         T.sortByWage(); // Sorts arraylist by wages descending.
         System.out.println(T.getAllVolunteers());
-        System.out.println("_____________________________________________________________________________________________\nSorted by amount of boxes");
+        System.out.format("_____________________________________________________________________________________________\n%59s %33s","SORTED BY BOXES DESCENDING ORDER","|");
         T.sortByBoxes(); // Sorts arraylist by boxes descending.
         System.out.println(T.getAllVolunteers());
-        System.out.println("_____________________________________________________________________________________________\nSorted alphabetically");
+        System.out.format("_____________________________________________________________________________________________\n%55s %37s","SORTED ALPHABETICALLY","|");
         T.sortAlphabetically();// Sorts arraylist alphabetically.
         System.out.println(T.getAllVolunteers());
-        System.out.println("_____________________________________________________________________________________________\nTeam statistics");
+        System.out.format("_____________________________________________________________________________________________\n%52s %40s","TEAM STATISTICS","|");
         System.out.println(T.getTeamStats()); // Prints the statistics of the team.
     }
 }

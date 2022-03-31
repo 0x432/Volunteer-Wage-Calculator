@@ -79,7 +79,7 @@ public class Team // Class to represent the team.
     }
 
     public String getTeamStats(){
-        String r = String.format("Total Team Members: %d\nTotal Volunteers: %d\nTotal Team leaders: %d\nTeam leaders names: %s\nTotal Boxes Delivered: %d\nTotal wage: %s",
+        String r = String.format("\nTotal Team Members: %d\nTotal Volunteers: %d\nTotal Team leaders: %d\nTeam leaders names: %s\nTotal Boxes Delivered: %d\nTotal wage: %s\n_____________________________________________________________________________________________",
                 getTotalTeamMembers() ,getTotalVolunteers() , getTotalTeamLeaders() ,getTeamLeadersNames() ,getTotalBoxes(), currencyFormat.format(getTotalWage()));
         return r;
     }
