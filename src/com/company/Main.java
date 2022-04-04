@@ -6,8 +6,8 @@ public class Main
     {
         Team T = new Team(); // Creating a new Team object.
 
-        T.addVolunteers(new TeamLeader(1,"Sofya",1,1)); // Creating new team leader and adding it to the arraylist.
-        T.addVolunteers(new Volunteer(2, "Steve", 2,4)); // Creating new volunteer and adding it to the arraylist.
+        T.addVolunteers(new TeamLeader(1,"Sofya",127,13)); // Creating new team leader and adding it to the arraylist.
+        T.addVolunteers(new Volunteer(2, "Steve", 46,9)); // Creating new volunteer and adding it to the arraylist.
         T.addVolunteers(new Volunteer(3, "Muhammed", 273,27));
         T.addVolunteers(new Volunteer(4, "Amaara", 129,33));
         T.addVolunteers(new Volunteer(5, "Ayub", 129,39));
