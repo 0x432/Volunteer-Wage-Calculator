@@ -5,6 +5,30 @@
 
 
 
+
+
+![table](https://user-images.githubusercontent.com/100306913/161520956-370b4b62-5055-49ca-86ef-501de10a93be.PNG)
+![teamstats](https://user-images.githubusercontent.com/100306913/161520962-4263739d-23d0-4831-9974-3e66bd9a2b1d.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![s](https://user-images.githubusercontent.com/100306913/161519869-1ed6b28a-16c7-4224-826e-e985c76f0210.PNG)
 ![error](https://user-images.githubusercontent.com/100306913/161519871-8f4ad6cf-5d58-4d32-931e-84819c8e2560.PNG)
 
