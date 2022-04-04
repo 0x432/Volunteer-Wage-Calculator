@@ -1,67 +1,141 @@
 # Java Project 1
 *Java Object Oriantation project for University Of Huddersfield By Caleb Bowden*
 
- ### **<ins>Classes</ins>** ### 
-**Main** - The Main class is responsible for the flow of the program it is used to add volunteers, teams, and team leaders. It acts as the backbone, as it provides all the data, and all methods are called here.
 
-**Team** - This class responsibility is to create a team and store the volunteers. The class also sorts volunteers and creates a clean table that can be returned using a method.
+### Classes
+Main - the main class is responsible for the flow of the program. It is used to add volunteers, team leaders. It acts as the backbone of the program. As it provides all the data and all the methods and classes are called from here.
 
-**Volunteer** - Volunteers are essential to the program, this class is responsible for all the volunteer methods, this class is used to store volunteers’ data, calculate wages and boxes. There are also get methods which allow us to get data from that volunteer within another class at any time.
+Team - this class's responsibility is to create a team and store all of the volunteers into that team. The team class also provides methods to collect volunteer data to display team statistics, it also provides methods to sort the team alphabetical,  by wage, by boxes delivered. 
 
-**Team Leader** - Because the team leader class is the same as the volunteer class with a few minor changes to the wage calculation and how it returns true for the team leader, its best to inherit the volunteer class this makes it, so you do not have to copy code.
+Volunteer - Volunteers are essential to the program. This class is responsible for storing volunteers data and calculating volunteer wages and boxes. It also displays volunteers using the format function within java to display the volunteers neatly.
 
-### **<ins>Methods Used</ins>** ### 
-**Constructor** - A constructor initialise the classes, they are used to add volunteer values when a new volunteer object is created. There is another constructor used in the Team class where a new array list is created for the team. 
+Team leader - Because the team leader class is basically the same as the volunteer class, we can inherit the methods from the volunteer class. However, team leaders get a 20% increase in the wage.  So we use the override function and the super function to get the wage and then add 20% onto the previous wage. We can also use the override function to display the team leader.
 
-![Picture1](https://user-images.githubusercontent.com/100306913/160293606-558582af-3409-4f17-8367-ec39e684b59d.png)
+### Methods used
+Constructor - A constructor initialises the classes, they are used to add volunteers values when a new volunteer object is created. Each class has a constructor to get the values from previous classes.
 
-**Update Boxes** - To update the boxes we must add the previous boxes to the boxes to add amount and then use .this to update that volunteers boxes.
+![Construco](https://user-images.githubusercontent.com/100306913/161516728-c5264a51-7283-4273-99f1-c656a0f86ec3.PNG)
 
-![Picture2](https://user-images.githubusercontent.com/100306913/160293627-c139d7b9-d9c5-4f85-a074-d92a4e8bdf65.png)
+Update boxes - To update boxes we must add the current value of the boxes to the add box value.
 
-**Getting Values** - there are a variety of get methods used these methods are simple and just return the data from that class.
+![Capture](https://user-images.githubusercontent.com/100306913/161518104-dab999ac-a3fb-47c9-beb7-68a5403b323e.PNG)
 
-![Picture3](https://user-images.githubusercontent.com/100306913/160293682-0a1acd07-9502-429d-a582-25c1b619ed47.png)
+Getting Values - There are a variety of get methods these methods are used to return the value of the specified object.
 
-**Calculate Wages** - The brief specified that a volunteer gets 0.15p for the first 50 boxes and then 0.20p for the rest. If the volunteer is a team leader, they get a 20% increase.  They are 2 wage calculations 1 in team leader class and the other in the volunteer class. They preform the same calculations just the team leader one adds 20% increase.
+![getvalues](https://user-images.githubusercontent.com/100306913/161516731-229606cc-f0ca-4006-8688-df3a4965c9d6.PNG)
 
-Volunteer Calculation | Team Leader Calculation
----|---
-![Picture4](https://user-images.githubusercontent.com/100306913/160293809-726251fd-3e43-43f4-a626-f611f9e39b07.png) | ![Picture5](https://user-images.githubusercontent.com/100306913/160293826-ebf058a8-8b98-4903-a30f-6149e26a7377.png)
+Storting volunteers - To sort volunteers we get the team ArrayList and use the compare to function which creates 2 new objects of the volunteer and compares both of them together.
 
-**Sorting volunteers** - To sort volunteer we get the array list and use sort to create 2 new objects of the volunteer and compares them to each other.
+![sorting](https://user-images.githubusercontent.com/100306913/161516732-f4b9378d-fcdd-421f-843d-b003485c69c4.PNG)
 
-![Picture5](https://user-images.githubusercontent.com/100306913/160613750-4d8e61f9-50fe-43c4-ab2b-081e71ac2a65.png)
+Team table - The team table loops through all the volunteer objects in the team ArrayList and uses the display method to print out the volunteer once this is done it will then move on to the next volunteer in the ArrayList on a new line.
 
-**Getting table / Stats** - To create a clean table we loop through all the volunteers in the list and create a new row for each volunteer and append it to a string that will be returned. This is the same for stats, but we must declare values for total wages and boxes.
+![table](https://user-images.githubusercontent.com/100306913/161516733-3f0c7b30-a613-4676-aaa1-44cac48e92c0.PNG)
 
-![Picture2](https://user-images.githubusercontent.com/100306913/160613855-35ec86a7-273e-425a-8c0b-d9a4ccd3d8c3.png)
-![Picture3](https://user-images.githubusercontent.com/100306913/160613929-0b2a6071-4187-4a27-b378-ab33718fb31d.png)
+Calculations - The brief specified that a volunteer gets 0.15p for the first 50 boxes and 0.20p for the rest. If the volunteer is a team leader they get a 20% increase. We must first check if the volunteer box amount is equal to or less than 50 if this is true we * the boxes by 0.15p to get the value. If there are more than 50 boxes we take away 50 boxes from the volunteer then we * 0.20p by the rest of the boxes and the * 50 by 0.15 once both of these calculations have been performed we then add them up to get the wage of the volunteer.
+![calc1](https://user-images.githubusercontent.com/100306913/161516738-a02abd06-a336-41a5-84a4-7d87cbdbf8d7.PNG)
 
-### **<ins>Testing Phase</ins>** ### 
-During this stage I came across some issues that could occur if the user enters values that are not suitable for example 0 or less than.  To combat this, I created a function within the volunteer class that checks if the value is less than or equal to 0. If this value is unsuitable, it will give an error and the program will exit.
+![calc2](https://user-images.githubusercontent.com/100306913/161516739-1cf0a17e-391e-4325-a391-00741205c31e.PNG)
 
-Volunteers sorted by boxes delivered | Volunteers sorted alphabetically | Volunteers Not Sorted | Volunteers Sorted by wage
----|---|---|---
-![Picture8](https://user-images.githubusercontent.com/100306913/160616947-076cb900-b3c8-4d58-8e40-c1b9a077155e.png) |![Picture9](https://user-images.githubusercontent.com/100306913/160617039-4c531dda-5446-44b8-b612-23c34a8d32e8.png) | ![Picture10](https://user-images.githubusercontent.com/100306913/160617463-d41aca25-f3e9-413a-b823-55bad563bb7e.png) | ![Picture11](https://user-images.githubusercontent.com/100306913/160617531-b29a6bc3-a90a-409d-94ab-b02a088ce6b0.png)
+Display - This method is used to display volunteer data and team leader data In a neat format to then be displayed as a table later on. This method can be overridden to be used in multiple classes.
 
-Input incorrect values for add boxes | 
-:---:|
-![Picture4](https://user-images.githubusercontent.com/100306913/160614849-b5fa25f4-ba33-4be5-94fc-b59bb921b1f2.png) |
-**Program Output** |
-![Picture5](https://user-images.githubusercontent.com/100306913/160615251-8f25483a-4686-40ea-baff-ae92ef187636.png)
+![display1](https://user-images.githubusercontent.com/100306913/161516735-2d0a1529-6b95-4159-8172-cbdcdcea424c.PNG)
 
-Input correct values for boxes | 
-:---:|
-![Picture6](https://user-images.githubusercontent.com/100306913/160616491-351080c2-f121-4230-9486-4e4caa0c381f.png) |
-**Program Output** |
-![Picture5](https://user-images.githubusercontent.com/100306913/160615251-8f25483a-4686-40ea-baff-ae92ef187636.png)
+![display2](https://user-images.githubusercontent.com/100306913/161516737-2402064f-8d4c-44dd-b9c1-faacccc96066.PNG)
 
-Code | 
----|
-![Picture7](https://user-images.githubusercontent.com/100306913/160616693-1546ac61-d71a-47e9-b569-a7c12e5d0342.png)
+### Testing phase
+During this stage I came across some issues that could occur if the user enters values that are not suitable, anything below 0 is classified as an unsuitable value. To combat this, I created a method within the volunteer class that checks if the value is less than or equal to 0 if this value is unsuitable it will give an error and ask the user to enter this value again. 
 
-Team Statistics | 
----|
-![Picture12](https://user-images.githubusercontent.com/100306913/160617644-3f9a4999-43f8-4da6-8282-0c41c51a3418.png)
+![Capture](https://user-images.githubusercontent.com/100306913/161518714-6a27ec5c-de8a-4050-85cf-ec5d45feda18.PNG)
+
+![error](https://user-images.githubusercontent.com/100306913/161519871-8f4ad6cf-5d58-4d32-931e-84819c8e2560.PNG)
+
+![s](https://user-images.githubusercontent.com/100306913/161519869-1ed6b28a-16c7-4224-826e-e985c76f0210.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![table](https://user-images.githubusercontent.com/100306913/161520956-370b4b62-5055-49ca-86ef-501de10a93be.PNG)
+![teamstats](https://user-images.githubusercontent.com/100306913/161520962-4263739d-23d0-4831-9974-3e66bd9a2b1d.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
