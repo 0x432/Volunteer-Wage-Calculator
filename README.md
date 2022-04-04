@@ -1,5 +1,35 @@
 # Java Project 1
 *Java Object Oriantation project for University Of Huddersfield By Caleb Bowden*
+
+
+
+
+
+![s](https://user-images.githubusercontent.com/100306913/161519869-1ed6b28a-16c7-4224-826e-e985c76f0210.PNG)
+![error](https://user-images.githubusercontent.com/100306913/161519871-8f4ad6cf-5d58-4d32-931e-84819c8e2560.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![Capture](https://user-images.githubusercontent.com/100306913/161518714-6a27ec5c-de8a-4050-85cf-ec5d45feda18.PNG)
 
 
