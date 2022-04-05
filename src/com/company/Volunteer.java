@@ -44,8 +44,7 @@ public class Volunteer // Class to represent the volunteers.
                 }
             }
             catch (NumberFormatException e) {
-                System.out.format("Error, volunteer %s Boxes must be integer values\nTry again: ",this.name);
-                input = s1.nextLine();
+                throw(e);
             }
         }
     }
