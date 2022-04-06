@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.Scanner;
 
@@ -7,7 +8,7 @@ public class Volunteer // Class to represent the volunteers.
 {
     NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(); // Formats currency to have a currency symbol.
 
-    private final int id;
+    private int id;
     private final String name;
     private int boxes;
 
@@ -21,9 +22,9 @@ public class Volunteer // Class to represent the volunteers.
 
     public Volunteer(int id, String name, int boxes, int addBoxes){ // Volunteer constructor.
         this.name = name;
-        this.id = checkInteger(String.valueOf(id));
-        this.boxes = checkInteger(String.valueOf(boxes));
-        updateBoxes(checkInteger(String.valueOf(addBoxes)));
+        this.id = checkIntgerPositive(id);
+        this.boxes = checkIntgerPositive(boxes);
+        updateBoxes(checkIntgerPositive(addBoxes));
     }
 
     public String display() {
@@ -31,20 +32,21 @@ public class Volunteer // Class to represent the volunteers.
                 getID(), getName(),getBoxes(),currencyFormat.format(getWage()));
     }
 
-    public int checkInteger(String input) {
-        Scanner s1 = new Scanner(System.in);
-        while (true) {
-            try {
-                if (Integer.parseInt(input) >= 0) {
-                    return Integer.parseInt(input);
+    public Integer checkIntgerPositive(int integer) {
+        Scanner in = new Scanner( System.in );
+        while (true){
+            try{
+                if (integer <= 0) {
+                    throw new ArithmeticException("ERROR (integerLessThanZero) : " + this.name + " cannot have a negative box value.");
                 }
                 else {
-                    System.out.format("Error, volunteer %s cannot have negative Boxes\nTry again: ",this.name);
-                    input = s1.nextLine();
+                    return integer;
                 }
             }
-            catch (NumberFormatException e) {
-                throw(e);
+            catch (ArithmeticException e){
+                e.printStackTrace();
+                System.out.print("\nTry again: ");
+                integer = in.nextInt();
             }
         }
     }
